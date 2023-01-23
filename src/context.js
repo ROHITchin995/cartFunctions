@@ -1,4 +1,4 @@
-import items from './data.js'
+import items from './data.json'
 import React, { useContext, useReducer, useEffect } from 'react'
 import reducer from './reducer.js'
 

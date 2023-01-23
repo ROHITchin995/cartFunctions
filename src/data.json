@@ -1,0 +1,23 @@
+[
+  {
+    "id": "rec1JZlfCIBOPdcT2",
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": "57999.99",
+    "img": "../images/galaxyS22Ultra.jpg",
+    "amount": 1
+  },
+  {
+    "id": "recB6qcHPxb62YJ75",
+    "title": "Google Pixel 6",
+    "price": "57000.99",
+    "img": "../images/googlePixel6.jpg",
+    "amount": 1
+  },
+  {
+    "id": "recdRxBsE14Rr2VuJ",
+    "title": "Xiaomi Redmi Note 2",
+    "price": "18499.99",
+    "img": "../images/redmiNote12.jpg",
+    "amount": 1
+  }
+]
