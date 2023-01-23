@@ -28,7 +28,25 @@ img{
   height: 5rem;
   object-fit: cover;
 }
+
+/* Navbar CSS */
 nav svg {
   width: 2rem;
   fill: var(--clr-white);
+}
+.navbar-center{
+  max-width: var(--fixed-width);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h3 {
+  margin-bottom: 0;
+  color: var(--clr-white);
+}
+.navbar-container {
+  display: block;
+  position: relative;
 }

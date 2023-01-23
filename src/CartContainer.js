@@ -5,6 +5,14 @@ import { useGlobalContext } from './context'
 
 function CartContainer() {
     const {cart, total, clearCart} = useGlobalContext()
+    if(cart.length === 0){
+        return(
+            <section>
+                <header>Your bag</header>
+                <h4>is currently empty</h4>
+            </section>
+        )
+    }
   return (
     <section>
         <header>
@@ -12,10 +20,7 @@ function CartContainer() {
             <div>
             {cart.map((item)=>{
                 return <CartItem key={item.id} {...item}/>
-            })}   
-
-
-                
+            })}                   
             </div>
             <footer>
                 <hr />
