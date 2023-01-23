@@ -10,9 +10,9 @@ function CartItem({ id, img, title, price, amount }) {
                 <h4>
                     {title}
                 </h4>
-                <h4>{price}</h4>
+                <h4 className='item-price'>{price}</h4>
                 {/* To remove item from cart */}
-                <button onClick={()=>remove(id)}>Remove</button>
+                <button className='remove-button' onClick={()=>remove(id)}>Remove</button>
             </div>
             <div>
                 {/* To increase amount */}
@@ -22,7 +22,7 @@ function CartItem({ id, img, title, price, amount }) {
                     </svg>
                 </button>
                 {/* To display amount */}
-                <p>
+                <p className='amount'>
                     {amount}
                 </p>
                 {/* To decrease amount */}

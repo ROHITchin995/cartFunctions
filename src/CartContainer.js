@@ -7,14 +7,14 @@ function CartContainer() {
     const {cart, total, clearCart} = useGlobalContext()
     if(cart.length === 0){
         return(
-            <section>
+            <section className='cart'>
                 <header>Your bag</header>
-                <h4>is currently empty</h4>
+                <h4 className='empty-cart'>is currently empty</h4>
             </section>
         )
     }
   return (
-    <section>
+    <section className='cart'>
         <header>
             <h2>Your Bag</h2>
             <div>
@@ -24,12 +24,12 @@ function CartContainer() {
             </div>
             <footer>
                 <hr />
-                <div>
+                <div className='cart-total'>
                     <h4>
-                    {total}
+                    Total <span>{total}</span>
                     </h4>
                 </div>
-                <button onClick={clearCart}>Clear Cart</button>
+                <button className='button clear-button' onClick={clearCart}>Clear Cart</button>
             </footer>
         </header>
     </section>
