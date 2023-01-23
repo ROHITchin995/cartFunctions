@@ -1,13 +1,14 @@
 import React from 'react'
 
-function CartItem() {
+function CartItem({ id, img, title, price, amount }) {
     return (
         <article>
+            <img src={img} alt={title} />
             <div>
                 <h4>
-                    title
+                    {title}
                 </h4>
-                <h4>Price</h4>
+                <h4>{price}</h4>
                 <button>Remove</button>
             </div>
             <div>
@@ -19,7 +20,7 @@ function CartItem() {
                 </button>
                 {/* To display amount */}
                 <p>
-                    Amount
+                    {amount}
                 </p>
                 {/* To decrease amount */}
                 <button className='amount-button'>

@@ -1,19 +1,27 @@
 import React from 'react'
 import CartItem from './CartItem'
+import { useGlobalContext } from './context'
+
 
 function CartContainer() {
+    const {cart, total} = useGlobalContext()
   return (
     <section>
         <header>
             <h2>Your Bag</h2>
             <div>
-                <CartItem />
+            {cart.map((item)=>{
+                return <CartItem key={item.id} {...item}/>
+            })}   
+
+
+                
             </div>
             <footer>
                 <hr />
                 <div>
                     <h4>
-                        Total
+                    {total}
                     </h4>
                 </div>
                 <button>Clear Cart</button>
