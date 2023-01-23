@@ -1,11 +1,14 @@
 import './App.css';
-import cartItems from './data'
+import CartContainer from './CartContainer';
+import Navbar from './Navbar';
+
 function App() {
-  console.log(cartItems)
+  
   return (
     <div className="App">
-      <img src={cartItems[0].img} alt="" />
-      
+     <Navbar /> 
+     <CartContainer />
+     
     </div>
   );
 }
