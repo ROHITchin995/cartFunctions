@@ -5,7 +5,7 @@ export default [
       "price": "57999.00",
       "img":
         '../images/galaxyS22Ultra.jpg',
-      "amount": "1",
+      "amount": 1,
     },
     {
       "id": "2",
@@ -13,7 +13,7 @@ export default [
       "price": "57000.00",
       "img":
         '../images/googlePixel6.jpg',
-      "amount": "1",
+      "amount": 1,
     },
     {
       "id": "3",

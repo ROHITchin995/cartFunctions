@@ -11,6 +11,22 @@ const reducer = (state, action)=>{
             cart : []
         }
     }
+    if (action.type === 'Toggle_Amount') {
+        let tempCart = state.cart
+          .map((cartItem) => {
+            if (cartItem.id === action.payload.id) {
+              if (action.payload.type === 'increase') {
+                return { ...cartItem, amount: cartItem.amount + 1 }
+              }
+              if (action.payload.type === 'decrease') {
+                return { ...cartItem, amount: cartItem.amount - 1 }
+              }
+            }
+            return cartItem
+          })
+          .filter((cartItem) => cartItem.amount !== 0)
+        return { ...state, cart: tempCart }
+      }
 
     if(action.type === 'Get_totals'){
         let {total, amount} = state.cart.reduce(
