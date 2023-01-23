@@ -1,15 +1,18 @@
 import React from 'react'
+import { useGlobalContext } from './context'
 
 function CartItem({ id, img, title, price, amount }) {
+    const {remove} = useGlobalContext()
     return (
-        <article>
+        <article className='cart-item'>
             <img src={img} alt={title} />
             <div>
                 <h4>
                     {title}
                 </h4>
                 <h4>{price}</h4>
-                <button>Remove</button>
+                {/* To remove item from cart */}
+                <button onClick={()=>remove(id)}>Remove</button>
             </div>
             <div>
                 {/* To increase amount */}

@@ -14,3 +14,21 @@ code {
 .amount-button {
   width: 1.5rem;
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img{
+  width: 100%;
+  display: block;
+}
+.cart-item img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+nav svg {
+  width: 2rem;
+  fill: var(--clr-white);
+}

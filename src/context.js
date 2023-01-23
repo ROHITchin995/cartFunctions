@@ -15,8 +15,17 @@ const AppProvider = ({ children }) => {
     useEffect(() => {
         dispatch({ type: 'Get_totals' })
     }, [])
+
+    const remove = (id)=>{
+        dispatch({type: 'Remove', payload: id})
+    }
+
+    const clearCart = (id)=>{
+        dispatch({type: 'Clear_Cart', payload: id})
+    }
+
     return (
-        <AppContext.Provider value={{ ...state }}>
+        <AppContext.Provider value={{ ...state, remove, clearCart }}>
             {children}
         </AppContext.Provider>
     )

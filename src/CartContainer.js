@@ -4,7 +4,7 @@ import { useGlobalContext } from './context'
 
 
 function CartContainer() {
-    const {cart, total} = useGlobalContext()
+    const {cart, total, clearCart} = useGlobalContext()
   return (
     <section>
         <header>
@@ -24,7 +24,7 @@ function CartContainer() {
                     {total}
                     </h4>
                 </div>
-                <button>Clear Cart</button>
+                <button onClick={clearCart}>Clear Cart</button>
             </footer>
         </header>
     </section>

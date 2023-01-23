@@ -1,4 +1,17 @@
 const reducer = (state, action)=>{
+    if(action.type === 'Remove'){
+        return {
+            ...state,
+            cart:state.cart.filter((cartItem)=> cartItem.id !== action.payload)
+        }
+    }
+    if(action.type === 'Clear_Cart'){
+        return {
+            ...state,
+            cart : []
+        }
+    }
+
     if(action.type === 'Get_totals'){
         let {total, amount} = state.cart.reduce(
             (cartTotal, cartItem) =>{
